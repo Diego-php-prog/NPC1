@@ -1,0 +1,515 @@
+/* ==============================
+   RESET GLOBAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f8fafc;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* ==============================
+   CABEÇALHO
+================================= */
+
+.cabecalho {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navegacao {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 5rem;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #111827;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #2563eb;
+}
+
+
+/* ==============================
+   HERO
+================================= */
+
+.hero {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 75vh;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem 0;
+}
+
+.hero-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3rem;
+}
+
+.subtitulo {
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12rem;
+}
+
+.hero h1 {
+    max-width: 650px;
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    color: #111827;
+}
+
+.hero h1 strong {
+    color: #2563eb;
+    display: block;
+}
+
+.hero-conteudo > p:not(.subtitulo) {
+    max-width: 550px;
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+.botao {
+    display: inline-block;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.9rem 1.5rem;
+
+    color: #ffffff;
+    background-color: #2563eb;
+
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.botao:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.hero-imagem {
+    margin: 0;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: 28rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.hero-imagem figcaption {
+    margin-top: 0.7rem;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+
+/* ==============================
+   SEÇÕES
+================================= */
+
+.empresa,
+.servicos,
+.contato {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 6rem 0;
+}
+
+.secao-cabecalho {
+    margin-bottom: 3rem;
+}
+
+.secao-cabecalho h2 {
+    margin-top: 0.5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #111827;
+}
+
+
+/* ==============================
+   EMPRESA
+================================= */
+
+.empresa {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.empresa-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+
+/* ==============================
+   CARDS
+================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.08);
+}
+
+.numero {
+    color: #2563eb;
+    font-weight: 800;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #111827;
+}
+
+.card p {
+    color: #64748b;
+}
+
+
+/* ==============================
+   FORMULÁRIO
+================================= */
+
+.contato {
+    border-top: 1px solid #e5e7eb;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+}
+
+.formulario legend {
+    padding: 0 0.5rem;
+    color: #2563eb;
+    font-weight: 800;
+}
+
+.grupo-formulario {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.campo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.campo label {
+    font-weight: 700;
+    color: #374151;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 0.4rem;
+
+    background-color: #ffffff;
+    color: #1f2937;
+
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.opcoes {
+    margin-bottom: 1.5rem;
+}
+
+.opcoes p {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.opcoes input {
+    accent-color: #2563eb;
+}
+
+.acoes {
+    display: flex;
+    gap: 1rem;
+}
+
+.secundario {
+    color: #1f2937;
+    background-color: #e5e7eb;
+}
+
+.secundario:hover {
+    background-color: #cbd5e1;
+}
+
+
+/* ==============================
+   RODAPÉ
+================================= */
+
+.rodape {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+
+    padding: 4rem 5% 2rem;
+
+    color: #cbd5e1;
+    background-color: #111827;
+}
+
+.rodape section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.rodape h2 {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.rodape address {
+    font-style: normal;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+
+    font-size: 0.85rem;
+}
+
+
+/* ==============================
+   TABLETS
+================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 3rem;
+    }
+
+    .hero-imagem {
+        max-width: 700px;
+    }
+
+    .empresa {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rodape {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ==============================
+   CELULARES
+================================= */
+
+@media (max-width: 600px) {
+
+    .navegacao {
+        width: 92%;
+        padding: 1rem 0;
+
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero,
+    .empresa,
+    .servicos,
+    .contato {
+        width: 92%;
+        padding: 4rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-imagem img {
+        height: 20rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .grupo-formulario {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .formulario {
+        padding: 1rem;
+    }
+
+    .formulario fieldset {
+        padding: 1rem;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    .acoes .botao {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+        padding: 3rem 4% 2rem;
+    }
+
+    .copyright {
+        grid-column: auto;
+    }
+}
